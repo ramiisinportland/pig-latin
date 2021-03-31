@@ -9,14 +9,17 @@ function pigLatin(userText) {
       return userText + "way";
     };
   }
-  console.log("Found a consonant!");
+  let firstLetter = userTextArray.shift();
+  userTextArray.push(firstLetter + "ay");
+  return userTextArray.join("");
 }
 
-
-
-
-
-//take input string from user (#input)
-//split the string into letters (inputArray[])
-//grab the first letter inputArray[0]
-//compare that input against vowelArray (foreach vowell in vowelArray === inputArray[0])
+$(document).ready(function() {
+  $("form#form").submit(function(event) {
+    const userInputText = $("#userInput").val();
+    // alert(pigLatin(userInputText));
+    $(".result").text(pigLatin(userInputText));
+    console.log(pigLatin(userInputText))
+    event.preventDefault();
+  })
+})

@@ -1,6 +1,6 @@
 Describe: pigLatin()
 
-Test: "It will add 'way' to the end of words that begin with a vowel." (A, E, I, O, U)
+Test: "It will add 'way' to the end of words that begin ith a vowel." (A, E, I, O, U)
 Code: pigLatin("a");
 Expected Output: "away"
 
